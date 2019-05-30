@@ -1,8 +1,5 @@
 const alfy = require('alfy');
-const fixPath = require('fix-path');
-const exec = require('child_process').exec;
-
-fixPath();
+const util = require('./util');
 
 function getList() {
     let promise = new Promise((resolve, reject) => {
@@ -10,7 +7,7 @@ function getList() {
         if (cachedRepos) {
             resolve(cachedRepos);
         } else {
-            exec('nrm ls', (err, stdout, stderr) => {
+            util.exec('nrm ls', (err, stdout, stderr) => {
                 let list = stdout.replace(/^\s*|\s*$/, '').split('\n').map((v) => v.trim()).filter((v) => v).map((v) => v.split(/[\s-]+/));
                 if (list) {
                     // cache 5分钟内有效
@@ -37,6 +34,7 @@ getList().then((list) => {
         }
         return {
             title: name,
+            arg: name,
             subtitle: repoUrl,
             variables: { name, repoUrl }
         };
