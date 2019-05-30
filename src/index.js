@@ -26,10 +26,19 @@ function getList() {
 getList().then((list) => {
     let items = list.map((v) => {
         let isStar = v[0] === '*';
+        let name;
+        let repoUrl;
+        if (isStar) {
+            name = v[1];
+            repoUrl = v[2];
+        } else {
+            name = v[0];
+            repoUrl = v[1];
+        }
         return {
-            title: isStar ? v[1] : v[0],
-            subtitle: isStar ? v[2] : v[1],
-            variables: { item: v }
+            title: name,
+            subtitle: repoUrl,
+            variables: { name, repoUrl }
         };
     });
     alfy.output(items);

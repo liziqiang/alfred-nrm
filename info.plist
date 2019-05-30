@@ -20,6 +20,16 @@
 				<key>vitoclose</key>
 				<false/>
 			</dict>
+			<dict>
+				<key>destinationuid</key>
+				<string>619A8A0C-9E12-40C6-A7D0-CA263952EBB9</string>
+				<key>modifiers</key>
+				<integer>0</integer>
+				<key>modifiersubtext</key>
+				<string></string>
+				<key>vitoclose</key>
+				<false/>
+			</dict>
 		</array>
 	</dict>
 	<key>createdby</key>
@@ -42,9 +52,9 @@
 				<key>removeextension</key>
 				<false/>
 				<key>text</key>
-				<string>xxx</string>
+				<string>Switched to {var:name}</string>
 				<key>title</key>
-				<string>xxx</string>
+				<string>NRM</string>
 			</dict>
 			<key>type</key>
 			<string>alfred.workflow.output.notification</string>
@@ -100,11 +110,41 @@
 			<key>version</key>
 			<integer>2</integer>
 		</dict>
+		<dict>
+			<key>config</key>
+			<dict>
+				<key>concurrently</key>
+				<false/>
+				<key>escaping</key>
+				<integer>102</integer>
+				<key>script</key>
+				<string>/usr/local/opt/node@8/bin/node src/switch.js "$1"</string>
+				<key>scriptargtype</key>
+				<integer>1</integer>
+				<key>scriptfile</key>
+				<string></string>
+				<key>type</key>
+				<integer>0</integer>
+			</dict>
+			<key>type</key>
+			<string>alfred.workflow.action.script</string>
+			<key>uid</key>
+			<string>619A8A0C-9E12-40C6-A7D0-CA263952EBB9</string>
+			<key>version</key>
+			<integer>2</integer>
+		</dict>
 	</array>
 	<key>readme</key>
 	<string></string>
 	<key>uidata</key>
 	<dict>
+		<key>619A8A0C-9E12-40C6-A7D0-CA263952EBB9</key>
+		<dict>
+			<key>xpos</key>
+			<integer>340</integer>
+			<key>ypos</key>
+			<integer>270</integer>
+		</dict>
 		<key>BB0F8C73-CF02-47FE-8125-E79ADCA519C1</key>
 		<dict>
 			<key>xpos</key>
