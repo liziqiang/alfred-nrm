@@ -1,0 +1,20 @@
+{
+  "name": "alfred-nrm",
+    "version": "1.0.0",
+    "description": "Switch NPM repo using nrm",
+    "main": "src/index.js",
+    "author": "Ziqiang Li",
+    "license": "MIT",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/liziqiang/alfred-nrm"
+    },
+    "scripts": {
+        "postinstall": "alfy-init",
+        "preuninstall": "alfy-cleanup"
+    },
+  "dependencies": {
+    "alfy": "^0.8.0",
+    "fix-path": "^2.1.0"
+  }
+}
