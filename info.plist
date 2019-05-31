@@ -70,6 +70,8 @@
 				<false/>
 				<key>alfredfiltersresultsmatchmode</key>
 				<integer>0</integer>
+				<key>argumenttreatemptyqueryasnil</key>
+				<false/>
 				<key>argumenttrimmode</key>
 				<integer>0</integer>
 				<key>argumenttype</key>
@@ -108,7 +110,7 @@
 			<key>uid</key>
 			<string>BB0F8C73-CF02-47FE-8125-E79ADCA519C1</string>
 			<key>version</key>
-			<integer>2</integer>
+			<integer>3</integer>
 		</dict>
 		<dict>
 			<key>config</key>
@@ -160,7 +162,9 @@
 			<integer>70</integer>
 		</dict>
 	</dict>
+	<key>version</key>
+	<string>1.0.3</string>
 	<key>webaddress</key>
-	<string></string>
+	<string>https://github.com/liziqiang/alfred-nrm#readme</string>
 </dict>
 </plist>

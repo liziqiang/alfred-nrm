@@ -23,20 +23,15 @@ function getList() {
 getList().then((list) => {
     let items = list.map((v) => {
         let isStar = v[0] === '*';
-        let name;
-        let repoUrl;
-        if (isStar) {
-            name = v[1];
-            repoUrl = v[2];
-        } else {
-            name = v[0];
-            repoUrl = v[1];
-        }
+        let startIdx = isStar ? 1 : 0;
+        let name = v[startIdx];
+        let repoUrl = v[startIdx + 1];
         return {
             title: name,
             arg: name,
             subtitle: repoUrl,
-            variables: { name, repoUrl }
+            variables: { name, repoUrl },
+            icon: alfy.icon.info
         };
     });
     alfy.output(items);
