@@ -91,7 +91,7 @@
 				<key>runningsubtext</key>
 				<string>Loading...</string>
 				<key>script</key>
-				<string>/usr/local/opt/node@8/bin/node src/index.js</string>
+				<string>/usr/local/opt/node@8/bin/node src/index.js "$1"</string>
 				<key>scriptargtype</key>
 				<integer>1</integer>
 				<key>scriptfile</key>
@@ -163,7 +163,7 @@
 		</dict>
 	</dict>
 	<key>version</key>
-	<string>1.0.3</string>
+	<string>1.0.6</string>
 	<key>webaddress</key>
 	<string>https://github.com/liziqiang/alfred-nrm#readme</string>
 </dict>
