@@ -19,7 +19,7 @@ module.exports = {
     },
     getRepos() {
         let promise = new Promise((resolve, reject) => {
-            this.exec('nrm ls', (err, stdout, stderr) => {
+            this.exec('/usr/local/bin/nrm ls', (err, stdout, stderr) => {
                 let list = stdout.replace(/^\s*|\s*$/, '').split('\n').map((v) => v.trim()).filter((v) => v).map((v) => v.split(/[\s-]+/));
                 if (list) {
                     // cache 5分钟内有效
